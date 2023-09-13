@@ -16,6 +16,34 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/android_bs?useUnicode=true&characterEncoding=utf-8
     username: root
     password: root
+    
+  #邮箱基本配置
+  mail:
+    #配置smtp服务主机地址
+    # qq邮箱为smtp.qq.com          端口号465或587
+    # sina    smtp.sina.cn
+    # aliyun  smtp.aliyun.com
+    # 163     smtp.163.com       端口号465或994
+    host: smtp.qq.com
+    #发送者邮箱
+    username: tang.jilei@qq.com
+    #配置授权码
+    password: enwsnxbhlngldfda
+    #端口号465或587
+    port: 587
+    #默认的邮件编码为UTF-8
+    default-encoding: UTF-8
+    #其他参数
+    properties:
+      mail:
+      #配置SSL 加密工厂
+      smtp:
+        ssl:
+          #本地测试，先放开ssl
+          enable: false
+          required: false
+          #开启debug模式，这样邮件发送过程的日志会在控制台打印出来，方便排查错误
+      debug: true
 logging:
   level:
     root: info

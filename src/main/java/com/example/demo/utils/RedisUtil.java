@@ -7,14 +7,15 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
+/*
+*  redis工具类
+*/
 @Component
 public class RedisUtil {
 
     @Resource
     private RedisTemplate redisTemplate;
-
-
-
+    
     public void setString(String key, String value){
         ValueOperations<String, String> valueOperations = redisTemplate.opsForValue();
         //默认一天过期时间
@@ -22,7 +23,6 @@ public class RedisUtil {
     }
 
     /**
-     *
      * @param key
      * @param value
      * @param time  过期时间 单位:秒
@@ -43,7 +43,7 @@ public class RedisUtil {
     }
 
     /**
-     *
+     *  
      * @param key
      * @return  返回  -1为空
      */
