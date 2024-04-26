@@ -35,7 +35,7 @@ public class TestController {
     @GetMapping("/token")
     public Result test1() throws RequestException {
         User user = new User();
-        user.setId(1);
+        user.setId(1l);
         user.setUsername("tjl");
         String token = jwtUtils.getToken(user);
         Map<String, Claim> ClaimMap = jwtUtils.parseJwt(token);

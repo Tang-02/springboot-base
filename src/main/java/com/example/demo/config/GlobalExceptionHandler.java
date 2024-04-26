@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author Tang
+ */
 @Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -15,7 +18,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = {Exception.class})
     @ResponseBody
     public Result exceptionHandler(RequestException e) {
-        log.err('异常信息==================='+e.getMessage());
+        log.error("异常信息==================={}", e.getMessage());
         return new Result(e.getCode(),e.getMessage());
     }
 }

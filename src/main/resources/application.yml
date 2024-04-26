@@ -1,6 +1,9 @@
 server:
   port: 8081
 spring:
+  mvc:
+    path match:
+      matching-strategy: ant-path-matcher #修复boot高版本引入swagger错误
   profiles:
     default: dev
 logging:
