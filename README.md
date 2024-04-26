@@ -8,3 +8,7 @@
 **Email服务 ： wait**<br>
 **持续更新中..**<br>
 
+git 提交错误
+
+**git config --global http.sslVerify "false"**
+
